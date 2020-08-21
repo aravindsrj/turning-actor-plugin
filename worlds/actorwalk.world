@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="default">
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <actor name="actor">
+      <pose>0 5 1.25 1.57 0 0</pose>
+      <skin>
+        <filename>walk.dae</filename>
+      </skin>
+      <animation name="walking">
+        <filename>walk.dae</filename>
+        <scale>1.000000</scale>
+        <interpolate_x>true</interpolate_x>
+      </animation>
+
+      <plugin name="actor_plugin" filename="libActorTurn.so">
+        <turn_radius>2</turn_radius>
+        <animation_factor>4.1</animation_factor>
+        <linear_velocity>1.13</linear_velocity>
+      </plugin>
+    </actor>
+  </world>
+</sdf>
