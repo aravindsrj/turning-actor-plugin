@@ -128,10 +128,6 @@ link_directories(${GAZEBO_LIBRARY_DIRS})
 list(APPEND CMAKE_CXX_FLAGS "${GAZEBO_CXX_FLAGS}")
 
 ## Declare a C++ library
-add_library(ActorPluginCircle SHARED src/ActorPluginCircle.cc)
-target_link_libraries(ActorPluginCircle ${GAZEBO_LIBRARIES})
-add_library(ActorPlugin SHARED src/ActorPlugin.cc)
-target_link_libraries(ActorPlugin ${GAZEBO_LIBRARIES})
 add_library(ActorTurn SHARED src/ActorTurn.cc)
 target_link_libraries(ActorTurn ${GAZEBO_LIBRARIES})
 
